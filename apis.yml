@@ -1,25 +1,75 @@
 aid: dyrt-co
+
 name: Dyrt
-description: 'Dyrt is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by techstars) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://dyrt.co/og-image.png
+
+description: 'Dyrt provides waste‑savings solutions for enterprises, governments and operators, ingesting invoices, contracts, utility bills and hauler data to identify cost reductions, lower emissions and improve vendor management. Their platform offers analytics, automated waste‑diversion tracking and reporting, helping customers such as hotels, arenas and corporate campuses cut waste spend by up to 30%.'
+
 url: https://raw.githubusercontent.com/api-evangelist/dyrt-co/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- Waste
+- Sustainability
+- Analytics
+- Enterprise
+- Government
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- techstars
+
 common:
+- type: Hosts
+  url: hosts/dyrt-co-hosts.yml
+- type: Vendors
+  url: vendors/dyrt-co-vendors.yml
+- type: Newsroom
+  url: https://dyrt.co/press
+- type: DomainSecurity
+  url: security/dyrt-co-domain-security.yml
 - type: Website
   url: https://dyrt.co/
+- type: DeveloperPortal
+  url: https://app.dyrt.co
+- type: Blog
+  url: https://dyrt.co/blog
+- type: TermsOfService
+  url: https://dyrt.co/terms
+- type: PrivacyPolicy
+  url: https://dyrt.co/privacy
+
+apis: []
+
+x-backed-by:
+- techstars
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The developer portal at https://app.dyrt.co loads a JavaScript SPA and provides no machine‑readable API spec.
+  evidence:
+    - url: https://app.dyrt.co
+      status: 200
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
